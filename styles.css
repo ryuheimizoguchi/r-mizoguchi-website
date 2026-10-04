@@ -119,6 +119,70 @@ main {
   margin-top: 8px;
 }
 
+.profile-header {
+  padding-bottom: 40px;
+}
+
+.research-overview {
+  border-top: 1px solid #ddd;
+}
+
+.dissertation {
+  border-top: 1px solid #ddd;
+}
+
+.education {
+  border-top: 1px solid #ddd;
+}
+
+dl {
+  margin: 0;
+}
+
+dt {
+  font-weight: bold;
+  margin-top: 24px;
+}
+
+dd {
+  margin: 6px 0 0 0;
+  line-height: 1.6;
+}
+
+.work-experience,
+.professional-activities,
+.research-grants {
+  border-top: 1px solid #ddd;
+}
+
+.qualifications,
+.memberships,
+.personal-note {
+  border-top: 1px solid #ddd;
+}
+
+.simple-list {
+  padding-left: 20px;
+}
+
+.simple-list li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.memberships a {
+  text-decoration: none;
+}
+
+.memberships a:hover {
+  text-decoration: underline;
+}
+
+.personal-note p {
+  max-width: 650px;
+  line-height: 1.8;
+}
+
 @media (max-width: 700px) {
 
   body {
