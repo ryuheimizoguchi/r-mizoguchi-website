@@ -13,12 +13,22 @@ p {
 }
 
 nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding-bottom: 20px;
   margin-bottom: 60px;
+  border-bottom: 1px solid #ddd;
 }
 
 nav a {
-  margin-right: 20px;
   text-decoration: none;
+  color: #222;
+  font-size: 16px;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 section {
