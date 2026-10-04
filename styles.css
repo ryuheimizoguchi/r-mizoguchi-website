@@ -46,3 +46,96 @@ section {
 .research-interests li {
   margin-bottom: 10px;
 }
+
+main {
+  width: 100%;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 80px 0;
+}
+
+.hero-text {
+  flex: 2;
+}
+
+.hero-links {
+  flex: 1;
+}
+
+.eyebrow {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero-position {
+  font-size: 22px;
+}
+
+.hero-description {
+  max-width: 650px;
+  line-height: 1.8;
+}
+
+.current-position,
+.research-interests {
+  padding: 40px 0;
+}
+
+.selected-publications,
+.news {
+  padding: 40px 0;
+  border-top: 1px solid #ddd;
+}
+
+.publication-item {
+  margin-bottom: 20px;
+}
+
+.selected-publications a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.selected-publications a:hover {
+  text-decoration: underline;
+}
+
+.news-item {
+  margin-bottom: 30px;
+}
+
+.news-item time {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.news-item p {
+  margin-top: 8px;
+}
+
+@media (max-width: 700px) {
+
+  body {
+    margin: 30px 20px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+}
