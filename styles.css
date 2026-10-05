@@ -136,16 +136,18 @@ main {
 }
 
 dl {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 24px 30px;
   margin: 0;
 }
 
 dt {
   font-weight: bold;
-  margin-top: 24px;
 }
 
 dd {
-  margin: 6px 0 0 0;
+  margin: 0;
   line-height: 1.6;
 }
 
@@ -201,5 +203,14 @@ dd {
 
   h1 {
     font-size: 36px;
+  }
+
+  dl {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  dd {
+    margin-bottom: 20px;
   }
 }
