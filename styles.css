@@ -1,61 +1,125 @@
+/* ===== Base ===== */
+
+html {
+  overflow-x: hidden;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #222;
+  background-color: #fff;
   max-width: 800px;
-  margin: 60px auto;
+  margin: 0 auto;
+  padding: 48px 24px;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 44px;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0 0 20px;
+}
+
+h3 {
+  font-size: 18px;
+  color: #555;
+  margin: 32px 0 12px;
 }
 
 p {
-  font-size: 20px;
+  margin: 0 0 16px;
 }
 
-nav {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  padding-bottom: 20px;
-  margin-bottom: 60px;
-  border-bottom: 1px solid #ddd;
-}
-
-nav a {
+a {
+  color: #0068b7;
   text-decoration: none;
-  color: #222;
-  font-size: 16px;
 }
 
-nav a:hover {
+a:hover {
   text-decoration: underline;
 }
 
+li {
+  margin-bottom: 8px;
+}
+
+ol li {
+  margin-bottom: 16px;
+}
+
+/* ===== Navigation ===== */
+
+nav {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  padding-bottom: 16px;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #0068b7;
+}
+
+nav a {
+  color: #222;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+nav a:hover {
+  color: #0068b7;
+  text-decoration: none;
+}
+
+/* ===== Sections ===== */
+
 section {
   padding: 40px 0;
-}
-
-.hero {
-  padding: 80px 0;
-}
-
-.research-interests h2 {
-  font-size: 28px;
-}
-
-.research-interests li {
-  margin-bottom: 10px;
 }
 
 main {
   width: 100%;
 }
 
+/* ===== Home ===== */
+
+.home-hero {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  height: 60vh;
+  min-height: 360px;
+  background-image: url("images/home-hero.jpg");
+  background-size: cover;
+  background-position: center 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.home-hero h1 {
+  font-size: 52px;
+  margin-bottom: 8px;
+}
+
+.home-hero .hero-position {
+  color: #fff;
+  font-size: 22px;
+}
+
 .hero {
   display: flex;
   justify-content: space-between;
   gap: 60px;
-  padding: 80px 0;
+  padding: 40px 0 60px;
 }
 
 .hero-text {
@@ -66,15 +130,18 @@ main {
   flex: 1;
 }
 
-.eyebrow {
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+.hero-links h2 {
+  font-size: 18px;
+}
+
+.hero-links ul {
+  list-style: none;
+  padding: 0;
 }
 
 .hero-position {
-  font-size: 22px;
+  font-size: 20px;
+  color: #555;
 }
 
 .hero-description {
@@ -85,61 +152,34 @@ main {
 .current-position,
 .research-interests {
   padding: 40px 0;
-}
-
-.selected-publications,
-.news {
-  padding: 40px 0;
   border-top: 1px solid #ddd;
 }
 
-.publication-item {
-  margin-bottom: 20px;
-}
-
-.selected-publications a {
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.selected-publications a:hover {
-  text-decoration: underline;
-}
-
-.news-item {
-  margin-bottom: 30px;
-}
-
-.news-item time {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.news-item p {
-  margin-top: 8px;
-}
+/* ===== Profile ===== */
 
 .profile-header {
   padding-bottom: 40px;
 }
 
 .profile-photo {
+  display: block;
   width: 180px;
   height: 180px;
   object-fit: cover;
   object-position: center top;
   border-radius: 50%;
+  margin: 8px 0 24px;
 }
 
-.research-overview {
-  border-top: 1px solid #ddd;
-}
-
-.dissertation {
-  border-top: 1px solid #ddd;
-}
-
-.education {
+.research-overview,
+.dissertation,
+.education,
+.work-experience,
+.professional-activities,
+.research-grants,
+.qualifications,
+.memberships,
+.personal-note {
   border-top: 1px solid #ddd;
 }
 
@@ -152,23 +192,12 @@ dl {
 
 dt {
   font-weight: bold;
+  color: #555;
 }
 
 dd {
   margin: 0;
   line-height: 1.6;
-}
-
-.work-experience,
-.professional-activities,
-.research-grants {
-  border-top: 1px solid #ddd;
-}
-
-.qualifications,
-.memberships,
-.personal-note {
-  border-top: 1px solid #ddd;
 }
 
 .simple-list {
@@ -180,28 +209,22 @@ dd {
   line-height: 1.6;
 }
 
-.memberships a {
-  text-decoration: none;
-}
-
-.memberships a:hover {
-  text-decoration: underline;
-}
-
 .personal-note p {
   max-width: 650px;
   line-height: 1.8;
 }
 
+/* ===== Small screens ===== */
+
 @media (max-width: 700px) {
 
   body {
-    margin: 30px 20px;
+    padding: 30px 20px;
   }
 
   nav {
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 16px;
   }
 
   .hero {
@@ -210,7 +233,20 @@ dd {
   }
 
   h1 {
+    font-size: 34px;
+  }
+
+  .home-hero {
+    height: 45vh;
+    min-height: 280px;
+  }
+
+  .home-hero h1 {
     font-size: 36px;
+  }
+
+  .home-hero .hero-position {
+    font-size: 18px;
   }
 
   dl {
