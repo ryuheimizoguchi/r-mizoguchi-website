@@ -123,6 +123,14 @@ main {
   padding-bottom: 40px;
 }
 
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+}
+
 .research-overview {
   border-top: 1px solid #ddd;
 }
