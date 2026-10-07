@@ -42,7 +42,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #004a85;
 }
 
 li {
@@ -55,14 +55,28 @@ ol li {
 
 /* ===== Navigation ===== */
 
-nav {
+.site-header {
   display: flex;
-  gap: 28px;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
   padding-bottom: 16px;
   margin-bottom: 40px;
   border-bottom: 2px solid #0068b7;
 }
+
+.site-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0068b7;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+}
+
 
 nav a {
   color: #222;
@@ -75,6 +89,36 @@ nav a:hover {
   color: #0068b7;
   text-decoration: none;
 }
+
+.header-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.header-icons a {
+  color: #555;
+  font-size: 20px;
+}
+
+.header-icons a:hover {
+  color: #0068b7;
+}
+
+/* ===== Footer ===== */
+
+.site-footer {
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.site-footer p {
+  margin: 0 0 4px;
+}
+
 
 /* ===== Sections ===== */
 
@@ -124,19 +168,6 @@ main {
 
 .hero-text {
   flex: 2;
-}
-
-.hero-links {
-  flex: 1;
-}
-
-.hero-links h2 {
-  font-size: 18px;
-}
-
-.hero-links ul {
-  list-style: none;
-  padding: 0;
 }
 
 .hero-position {
