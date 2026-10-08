@@ -1,35 +1,25 @@
-// 1. Find the buttons and the two areas on the page
-const showAllButton = document.querySelector("#show-all");
-const showArticlesButton = document.querySelector("#show-articles");
-const showPresentationsButton = document.querySelector("#show-presentations");
+// 1. Find all filter buttons and all groups on the page
+const buttons = document.querySelectorAll(".pub-filter button");
+const groups = document.querySelectorAll("[data-group]");
 
-const articles = document.querySelector("#articles");
-const presentations = document.querySelector("#presentations");
+// 2. Give every button the same click behavior
+buttons.forEach(function (button){
+    button.addEventListener("click", function () {
+        const filter = button.dataset.filter;
 
-// 2. Decide what happens when each button is clicked
-showAllButton.addEventListener("click", function (){
-    articles.hidden = false;
-    presentations.hidden = false;
+    // Show the matching group(s), hide the others
+    groups.forEach(function (group){
+        if (filter === "all" || group.dataset.group === filter){
+            group.hidden = false;
+        } else {
+            group.hidden = true;
+        }
+    });
 
-    showAllButton.classList.add("is-active");
-    showArticlesButton.classList.remove("is-active");
-    showPresentationsButton.classList.remove("is-active");
-});
-
-showArticlesButton.addEventListener("click", function (){
-    articles.hidden = false;
-    presentations.hidden = true;
-
-    showAllButton.classList.remove("is-active");
-    showArticlesButton.classList.add("is-active");
-    showPresentationsButton.classList.remove("is-active");
-});
-
-showPresentationsButton.addEventListener("click", function (){
-    articles.hidden = true;
-    presentations.hidden = false;
-
-    showAllButton.classList.remove("is-active");
-    showArticlesButton.classList.remove("is-active");
-    showPresentationsButton.classList.add("is-active");
+    // Highlight only the clicked button
+    buttons.forEach(function (otherButton){
+        otherButton.classList.remove("is-active");
+    });
+    button.classList.add("is-active");
+    });
 });

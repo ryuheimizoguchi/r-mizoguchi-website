@@ -47,12 +47,12 @@
       <h1>Publications</h1>
 
       <div class="pub-filter">
-        <button type="button" id="show-all" class="is-active">All</button>
-        <button type="button" id="show-articles">Articles</button>
-        <button type="button" id="show-presentations">Presentations</button>
+        <button type="button" class="is-active" data-filter="all">All</button>
+        <button type="button" data-filter="articles">Articles</button>
+        <button type="button" data-filter="presentations">Presentations</button>
       </div>
 
-      <div id="articles">
+      <div data-group="articles">
       <h2>Articles in Refereed Journals</h2>
 
       <ol>
@@ -90,7 +90,7 @@
 
       </div>
 
-      <div id="presentations">
+      <div data-group="presentations">
       <h2>Presentations</h2>
 
       <h3>Paper Presentations</h3>
